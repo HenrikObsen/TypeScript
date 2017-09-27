@@ -3,26 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TypeScript", "..\..\WebSites\TypeScript\", "{CAD080DB-6A5F-4265-8F49-D255AE33295A}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TypeScript(1)", "TypeScript\", "{4F8F48A9-8727-4E51-A2E4-FE7580C38801}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_52669"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\TypeScript\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52669\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64599"
+		Debug.AspNetCompiler.PhysicalPath = "TypeScript\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64599\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_52669"
-		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\TypeScript\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52669\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64599"
+		Release.AspNetCompiler.PhysicalPath = "TypeScript\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64599\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "52669"
-		SlnRelativePath = "..\..\WebSites\TypeScript\"
-		DefaultWebSiteLanguage = "Visual C#"
+		VWDPort = "64599"
+		SlnRelativePath = "TypeScript\"
 	EndProjectSection
 EndProject
 Global
@@ -30,8 +29,8 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CAD080DB-6A5F-4265-8F49-D255AE33295A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CAD080DB-6A5F-4265-8F49-D255AE33295A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8F48A9-8727-4E51-A2E4-FE7580C38801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8F48A9-8727-4E51-A2E4-FE7580C38801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
