@@ -23,7 +23,6 @@
         return output
     }
 
-
     showHTML(data: any) {
         console.log(data)
         let colorList = "<ul>"
