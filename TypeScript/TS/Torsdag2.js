@@ -69,7 +69,7 @@ var Program2 = (function (_super) {
         for (var i = 1; i <= stars; i++) {
             starList += "<i class=\"fa fa-star\" aria-hidden=\"true\"> </i>";
         }
-        var html = "<div class=\"col-sm-6\"><div class=\"row\" style=\"border:solid black 1px; padding: 10px 20px 10px 20px;\"><div class=\"col-sm-6\">\n\t\t\t\t<h2>" + data.title + "</h2>\n<p>" + starList + "</p>\n\t\t\t\t<p>" + data.description + "</p>\n            <p><b>Colors:</b><br/> " + colorList + "</p>\n            <p><b>Price: " + data.price + "</b></p>\n\t\t</div><div class=\"col-sm-6\">\n<img src=\"" + data.image + "\" class=\"img-responsive\" />\n        </div></div></div>";
+        var html = "<div class=\"col-sm-6\"><div class=\"row\" style=\"padding: 10px 20px 10px 20px;\"><div class=\"col-sm-6 text-left\">\n\t\t\t\t<h2>" + data.title + "</h2>\n<p>" + starList + "</p>\n\t\t\t\t<p>" + data.description + "</p>\n            <p><b>Colors:</b><br/> " + colorList + "</p>\n            <p><b>Price: " + data.price + "</b></p>\n\t\t</div><div class=\"col-sm-6\">\n<img src=\"" + data.image + "\" class=\"img-responsive\" />\n        </div></div></div>";
         document.getElementById("myDiv").innerHTML += html;
     };
     return Program2;

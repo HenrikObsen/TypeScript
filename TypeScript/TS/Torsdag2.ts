@@ -97,7 +97,7 @@ class Program2 extends OfflineSupport {
             starList += `<i class="fa fa-star" aria-hidden="true"> </i>`
         }
 
-        const html = `<div class="col-sm-6"><div class="row" style="border:solid black 1px; padding: 10px 20px 10px 20px;"><div class="col-sm-6">
+        const html = `<div class="col-sm-6"><div class="row" style="padding: 10px 20px 10px 20px;"><div class="col-sm-6 text-left">
 				<h2>${data.title}</h2>
 <p>${starList}</p>
 				<p>${data.description}</p>
