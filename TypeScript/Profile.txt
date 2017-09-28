@@ -1,0 +1,35 @@
+﻿
+
+function c 	    {clear}
+function cls 	{clear}
+function s      {&"C:\Program Files\Sublime Text 3\sublime_text.exe" $args}
+
+
+########################## git #####################
+function gs     { git status}
+
+########################## npm #####################
+function deploy { npm run deploy}
+function i      { npm install --global $args }
+
+
+
+########################## prompt ##################
+function prompt
+{
+    $host.UI.RawUI.WindowTitle = (get-location).Path;
+    return "PS > "
+}
+
+
+
+
+## scoop install pshazz 
+
+try { $null = gcm pshazz -ea stop; pshazz init 'default' } catch { }
+
+
+
+
+
+cd c:\dev
