@@ -1,4 +1,6 @@
-﻿interface bilType {
+﻿//http://www.sochix.ru/how-to-integrate-webpack-into-visual-studio-2015/
+
+interface bilType {
     
     title: string
     description: string
@@ -11,10 +13,28 @@ interface dataresponse {
     products : Array<bilType>
 }
 
-class Program2 {
+
+enum NetStatus {
+    Offline = 0,
+    Online = 1
+}
+
+class OfflineSupport {
+
+    constructor() {
+
+    }
+    netWorkStatus: NetStatus = NetStatus.Online
+
+    hentDataFraLocalStorage()
+    {}
+}
+
+class Program2 extends OfflineSupport {
     adresse: string = "https://couchdb.itacademy.dk/onsdag/2017"
 
     constructor() {
+        super()
     }
 
     hentData2( cb ) : any{
@@ -77,15 +97,15 @@ class Program2 {
             starList += `<i class="fa fa-star" aria-hidden="true"> </i>`
         }
 
-        const html = `<table style="border:solid black 1px; width: 600px; padding: 10px 20px 10px 20px;"><tr><td>
+        const html = `<div class="col-sm-6"><div class="row" style="border:solid black 1px; padding: 10px 20px 10px 20px;"><div class="col-sm-6">
 				<h2>${data.title}</h2>
 <p>${starList}</p>
 				<p>${data.description}</p>
             <p><b>Colors:</b><br/> ${colorList}</p>
             <p><b>Price: ${data.price}</b></p>
-		</td><td style="text-align: right;">
-<img src="${data.image}" style="width:300px;" />
-        </td></tr></table><br/>`
+		</div><div class="col-sm-6">
+<img src="${data.image}" class="img-responsive" />
+        </div></div></div>`
 
         document.getElementById("myDiv").innerHTML += html
     }
@@ -97,3 +117,21 @@ let myApp2 = new Program2()
 myApp2.hentData()
 
 myApp2.hentData2((data: dataresponse) => myApp2.showHTML(data.products[0]));
+
+//myApp2.hentData2((data: dataresponse) => { data.products.filter(data => data.stars >=2) });
+//const orders = [
+//    {
+//        item: "Product1",
+//        price: 10
+//    },
+//    {
+//        item: "Product2",
+//        price: 20
+//    },
+//    {
+//        item: "Product3",
+//        price: 30
+//    }
+//]
+
+//const priceTotal = orders.map(data = > data.price).reduce()
