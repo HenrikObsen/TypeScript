@@ -1,4 +1,5 @@
 //http://www.sochix.ru/how-to-integrate-webpack-into-visual-studio-2015/
+//https://whatwebcando.today
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19,6 +20,9 @@ var OfflineSupport = (function () {
         this.netWorkStatus = NetStatus.Online;
     }
     OfflineSupport.prototype.hentDataFraLocalStorage = function () { };
+    OfflineSupport.prototype.detectNetworkStatus = function () {
+        return (navigator.onLine ? NetStatus.Online : NetStatus.Offline);
+    };
     return OfflineSupport;
 }());
 var Program2 = (function (_super) {
@@ -26,6 +30,8 @@ var Program2 = (function (_super) {
     function Program2() {
         var _this = _super.call(this) || this;
         _this.adresse = "https://couchdb.itacademy.dk/onsdag/2017";
+        _this.netWorkStatus = _this.detectNetworkStatus();
+        document.getElementById("status").innerHTML = (_this.netWorkStatus == NetStatus.Online ? "Online" : "Offline");
         return _this;
     }
     Program2.prototype.hentData2 = function (cb) {

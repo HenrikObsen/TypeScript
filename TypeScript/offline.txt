@@ -1,0 +1,7 @@
+﻿CACHE MANIFEST
+
+#Liste med filer der skal bruges ofline <html manifest="offline.txt">
+
+TS/Torsdag2.js
+Content/bootstrap.min.css
+Content/font-awesome.min.css

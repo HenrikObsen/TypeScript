@@ -1,4 +1,5 @@
 ﻿//http://www.sochix.ru/how-to-integrate-webpack-into-visual-studio-2015/
+//https://whatwebcando.today
 
 interface bilType {
     
@@ -27,7 +28,11 @@ class OfflineSupport {
     netWorkStatus: NetStatus = NetStatus.Online
 
     hentDataFraLocalStorage()
-    {}
+    { }
+
+    detectNetworkStatus(): NetStatus {
+        return ( navigator.onLine ? NetStatus.Online : NetStatus.Offline)
+    }
 }
 
 class Program2 extends OfflineSupport {
@@ -35,6 +40,9 @@ class Program2 extends OfflineSupport {
 
     constructor() {
         super()
+        this.netWorkStatus = this.detectNetworkStatus()
+
+        document.getElementById("status").innerHTML = (this.netWorkStatus == NetStatus.Online ? "Online" : "Offline");
     }
 
     hentData2( cb ) : any{
